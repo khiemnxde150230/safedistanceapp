@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "SafeDistance Live",
+    "slug": "safedistance-depth-lab",
+    "scheme": "safedistance-depth-lab",
+    "version": "0.2.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.safedistance.depthlab",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Cho phép chụp ảnh để ước lượng chiều sâu trực tiếp trên thiết bị.",
+        "NSPhotoLibraryUsageDescription": "Cho phép chọn ảnh để thử nghiệm ước lượng chiều sâu offline.",
+        "NSLocationWhenInUseUsageDescription": "Dùng vị trí GPS để hiển thị tốc độ km/h khi ứng dụng đang mở."
+      }
+    },
+    "plugins": [
+      "onnxruntime-react-native",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Cho phép SafeDistance chụp ảnh để phân tích độ sâu.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Cho phép chọn ảnh để thử nghiệm ước lượng chiều sâu."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Dùng vị trí để đo tốc độ GPS khi ứng dụng đang mở.",
+          "isIosBackgroundLocationEnabled": false
+        }
+      ]
+    ],
+    "assetBundlePatterns": [
+      "assets/**/*"
+    ]
+  }
+}

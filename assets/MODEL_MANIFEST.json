@@ -1,0 +1,35 @@
+{
+  "source": "SafeDistance V11.8 assets; ONNX exported in V11.7.1 using weights trained in V11.6 DAIR Example pilot",
+  "input": {
+    "shape": [
+      1,
+      3,
+      192,
+      640
+    ],
+    "dtype": "float32",
+    "color": "RGB",
+    "normalization": "/255",
+    "resize": "stretch_to_640x192",
+    "layout": "NCHW"
+  },
+  "output": {
+    "depth_m_range": [
+      0.1,
+      80.0
+    ],
+    "evaluation_warning": "DAIR Example only; unsafe to use for driving warnings"
+  },
+  "models": {
+    "metric_only": {
+      "relative_path": "assets/models/metric_only.onnx",
+      "bytes": 750562,
+      "sha256": "ff73391b350230fa041392f9c5a0fd83918b1ecc8918a95e8ac3ba2ac47851bc"
+    },
+    "metric_kd_grad": {
+      "relative_path": "assets/models/metric_kd_grad.onnx",
+      "bytes": 750562,
+      "sha256": "c375f5b6ab6530a75cda5543798845be93dbe45f43d0b2baf3e4e686c9ddff5b"
+    }
+  }
+}

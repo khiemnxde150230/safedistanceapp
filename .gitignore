@@ -1,0 +1,9 @@
+node_modules/
+.expo/
+.ios-build/
+ios/
+android/
+dist/
+*.ipa
+*.app
+.env
